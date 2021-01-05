@@ -1,22 +1,103 @@
 .header{
+    background-color: $mono;
+    font-family: $condensed;
+    font-weight: bold;
+    p{
+        display: inline-block;
+    }
+}
+.seccion{
     padding: 30px;
     width: 100%;
+
     .navigation{
         display: flex;
         justify-content: space-between;
+        
     
-    &__logo{
-        width: 9.375rem;
-        height: auto;
-        display: inline-block;
-    }
-    h1{
-        display: inline-block;
-    }
+        &__logo{
+            width: 9.375rem;
+            height: auto;
+            display: inline-block;
+        }
+        h1{
+            display: inline-block;
+        }
+
+        
 }
 }
-.img-dog{
+.container{
+    .carrito{
+        &__indice{
+            font-family: $inconsolata;
+            background-color: white;
+            border-radius: 50%;
+        }
+       
+        &__eliminar:hover{
+           color: $oil;
+           font-weight: bold;
+                }
+    }
+    .contenido{
+        display: flex;
+        justify-content: center;
+    
+    margin-top: 2.5rem;
+  .card{
+    transition: transform .2s;
+
+    .botons{
+        color: $grisaceo;
+        font-family: $condensed;
+        
+        p{
+           margin: 0;
+           padding:0;
+        }
+        .icon:hover{
+            color: $oil;
+        }
+    }
+  }  
+  .card:hover{
+    transform: scale(1.1); 
+  }
+  .img-dog{
     height: 19.75rem;
     width: auto;
 }
+}
+}
 
+@include respond-to($bp-md){
+    .seccion{
+        padding: 5% 30% 0 0;
+
+        .navigation{
+            h1{
+                font-size: 1.875rem;
+            }
+            .fa-shopping-basket{
+                font-size: 2.5rem;
+                margin: 0;
+            }
+            p{
+                margin: 0;
+            }
+            &__logo{
+                width: 4rem;
+            }
+        }
+        
+    }
+
+    .header{
+        .container-fluid{
+            display: none;
+        }
+    }
+
+
+}

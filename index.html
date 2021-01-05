@@ -10,24 +10,35 @@
 </head>
 <body>
     
-    <nav class="header">
+    <section class="seccion">
         <div class="navigation">
-            <div class="navigation__titulo"><img class="navigation__logo"src="https://i.pinimg.com/originals/bc/d3/61/bcd3618a1653614dce21254e1e982a20.png" alt=""><h1>DoggieLand</h1></div>
-            <div class="carrito">
-            <i class="fas fa-shopping-basket fa-2x mr-2">:<div id="demo"></div></i>
-               
-              <a onClick="restar()" class="btn btn-danger ml-5">-</a>
-             </div>   
-             
+            <div class="navigation__titulo"><img class="navigation__logo "src="https://i.pinimg.com/originals/bc/d3/61/bcd3618a1653614dce21254e1e982a20.png" alt=""><h1>DoggieLand</h1></div>
+                
+            </div>
+    </section>
+    <header class="header d-flex justify-content-center">
+        <div class="container-fluid py-5">
+            <div class="px-5 mx-5">
+                <h1>Bienvenido a DoggieLand!, </h1>
+                <h2 class="ml-5 mb-4">un lugar donde puedes hacer feliz a un perrito o más.</h2>
+            </div>
+            <div class="px-5">
+            <p class="pr-5 ml-4 w-50">Muchas veces sufrimos al ver tanto perrito abandonado y nos dan ganas de adoptarlos a todos! Pero no siempre es posible, por eso en DoggieLand 
+                puedes apadrinar a uno y hacerlo muy feliz. Te invito a ver a estos hermosos caninos, sin duda hará feliz tu día.
+            </p> <img class="w-25 ml-5" src="https://www.pumpkin.care/assets/images/for-dogs-2.0-2x.png" alt="">
+            </div>
+           
+            <h2 class="text-center"><i class="fas fa-chevron-down"></i></h2>
         </div>
-     
-    </nav>
+    </header>
     <section class="container">
-        <div id="contenido" class="row">
-
+        <div class="carrito text-right pt-2 fixed-top">
+            <i class="icon fas fa-shopping-basket fa-2x mr-2"><sup id="demo" class="carrito__indice"></sup></i>
+            <p onClick="limpiar()" class="carrito__eliminar btn ml-2"><i class="far fa-trash-alt"></i></p>
+        </div>   
+        <div id="contenido" class="contenido row pt-2">
         </div>
     </section>
-
    <script src="js/script.js"></script> 
 </body>
 </html>

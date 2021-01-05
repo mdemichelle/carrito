@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Open+Sans+Condensed:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,30 +6,97 @@
 
 body {
   box-sizing: border-box;
-  background-image: url("https://www.revistatodo.com/wp-content/uploads/2018/03/huellas-perro-1024x1024.jpg");
+  background-image: url("https://www.muralswallpaper.com/app/uploads/Blue-Dog-Paw-Print-Pattern-Wallpaper-Mural-Plain.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: inherit;
+  font-family: "Inconsolata", monospace;
 }
 
 .header {
+  background-color: #2d6e8ede;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: bold;
+}
+.header p {
+  display: inline-block;
+}
+
+.seccion {
   padding: 30px;
   width: 100%;
 }
-.header .navigation {
+.seccion .navigation {
   display: flex;
   justify-content: space-between;
 }
-.header .navigation__logo {
+.seccion .navigation__logo {
   width: 9.375rem;
   height: auto;
   display: inline-block;
 }
-.header .navigation h1 {
+.seccion .navigation h1 {
   display: inline-block;
 }
 
-.img-dog {
+.container .carrito__indice {
+  font-family: "Inconsolata", monospace;
+  background-color: white;
+  border-radius: 50%;
+}
+.container .carrito__eliminar:hover {
+  color: #1f4e75;
+  font-weight: bold;
+}
+.container .contenido {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+.container .contenido .card {
+  transition: transform 0.2s;
+}
+.container .contenido .card .botons {
+  color: #646668;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+.container .contenido .card .botons p {
+  margin: 0;
+  padding: 0;
+}
+.container .contenido .card .botons .icon:hover {
+  color: #1f4e75;
+}
+.container .contenido .card:hover {
+  transform: scale(1.1);
+}
+.container .contenido .img-dog {
   height: 19.75rem;
   width: auto;
+}
+
+@media (max-width: 768px) {
+  .seccion {
+    padding: 5% 30% 0 0;
+  }
+  .seccion .navigation h1 {
+    font-size: 1.875rem;
+  }
+  .seccion .navigation .fa-shopping-basket {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  .seccion .navigation p {
+    margin: 0;
+  }
+  .seccion .navigation__logo {
+    width: 4rem;
+  }
+
+  .header .container-fluid {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
