@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
 }
-
 body{
     box-sizing: border-box;
     background-image: url('https://www.muralswallpaper.com/app/uploads/Blue-Dog-Paw-Print-Pattern-Wallpaper-Mural-Plain.jpg');
@@ -11,4 +10,8 @@ body{
     background-attachment: fixed;
     background-position: inherit;
     font-family: $inconsolata;
+}
+a{
+    color:inherit;
+    text-decoration: none;
 }

@@ -1,28 +1,30 @@
 .header{
     background-color: $mono;
     font-family: $condensed;
-    font-weight: bold;
+    font-weight: 700;
     p{
         display: inline-block;
+    
+    }
+    .info{
+        color: white;
     }
 }
 .seccion{
-    padding: 30px;
-    width: 100%;
-
+padding: 30px;
+width: 100%;
     .navigation{
         display: flex;
         justify-content: space-between;
-        
-    
-        &__logo{
-            width: 9.375rem;
-            height: auto;
-            display: inline-block;
-        }
-        h1{
-            display: inline-block;
-        }
+            &__logo{
+                width: 9.375rem;
+                height: auto;
+                display: inline-block;
+            }
+            h1{
+                display: inline-block;
+                font-weight: 900;
+            }
 
         
 }
@@ -39,27 +41,34 @@
            color: $oil;
            font-weight: bold;
                 }
+        .icon{
+            font-size: 1.3em;
+        }
+        sup{
+            padding: 0 0.4em;
+        }
     }
     .contenido{
         display: flex;
         justify-content: center;
-    
-    margin-top: 2.5rem;
-  .card{
-    transition: transform .2s;
+        margin-top: 2.5rem;
+    .card{
+        transition: transform .2s;
 
-    .botons{
-        color: $grisaceo;
-        font-family: $condensed;
-        
-        p{
-           margin: 0;
-           padding:0;
+        h5{
+            font-weight: 900;
         }
-        .icon:hover{
-            color: $oil;
+        .botons{
+            color: $grisaceo;
+            font-family: $condensed;
+            p{
+                margin: 0;
+                padding:0;
+            }
+            .icon:hover{
+                color: $oil;
+            }
         }
-    }
   }  
   .card:hover{
     transform: scale(1.1); 
@@ -67,7 +76,7 @@
   .img-dog{
     height: 19.75rem;
     width: auto;
-}
+    }
 }
 }
 
@@ -90,14 +99,10 @@
                 width: 4rem;
             }
         }
-        
     }
-
     .header{
         .container-fluid{
             display: none;
         }
     }
-
-
 }

@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
     fetchDogs()
-
-    
 })
+//Id de la etiqueta donde se mostrará el contenido
 const contenido = document.getElementById("contenido");
 const total = 20;
 
+//Trae los perritos hasta 20 como limite
 const fetchDogs= async () => {
 	for (let i = 1; i <= total; i++) {
         await getDog(i);
     }
     
 };
-
+// fetch con promesa
 const getDog = async id => {
 	const url = 'https://dog.ceo/api/breeds/image/random/20';
 	const res = await fetch(url);
@@ -22,6 +22,7 @@ const getDog = async id => {
  
 };
 
+//Se crea la card con los perritos
 const dogCard = (dog) =>{
     const doggie = document.createElement('div');
     doggie.classList.add('dog');
@@ -38,28 +39,30 @@ const dogCard = (dog) =>{
           <span>Quitar<a onClick="restar()" class="btn"><i class="icon fas fa-minus-circle"></i></a></span>
         </div>
       </div>
-</div>
+    </div>
     `;
 
     doggie.innerHTML = createCard;
     contenido.appendChild(doggie);
 }
 
-var a = 0;
+// Contador de perritos apadrinados
+
+var resultado = 0;
 const añadir = () =>{
-a = a+1
-document.getElementById("demo").textContent = a;
+    resultado = resultado+1
+document.getElementById("valor").textContent = resultado;
 }
 
 var restar = () => {
-    if(a>0){
-        a= a-1
-    document.getElementById("demo").textContent = a;
+    if(resultado>0){
+        resultado= resultado-1
+    document.getElementById("valor").textContent = resultado;
     }
 }
 var limpiar =()=>{
-    if(a>0){
-        a= a-a
-    document.getElementById("demo").textContent = a;
+    if(resultado>0){
+        resultado= resultado-resultado
+    document.getElementById("valor").textContent = resultado;
     }
 }    
